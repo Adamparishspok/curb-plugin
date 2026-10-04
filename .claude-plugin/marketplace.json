@@ -1,0 +1,15 @@
+{
+	"name": "curb",
+	"owner": { "name": "Curb", "email": "hello@hicurb.com" },
+	"metadata": {
+		"description": "Curb's plugin for Claude Code and Grok Build: move a website to Curb and run it from your agent."
+	},
+	"plugins": [
+		{
+			"name": "curb",
+			"source": "./",
+			"description": "Move your website to Curb's AI-ready hosting and run it from your agent.",
+			"category": "productivity"
+		}
+	]
+}
