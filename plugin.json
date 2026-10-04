@@ -1,0 +1,115 @@
+{
+	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+	"name": "curb",
+	"version": "1.0.0",
+	"description": "Move your website to Curb's fast, AI-ready hosting and run it from ChatGPT.",
+	"author": {
+		"name": "Curb",
+		"url": "https://hicurb.com"
+	},
+	"homepage": "https://hicurb.com/agents",
+	"repository": "https://github.com/Adamparishspok/curb-plugin",
+	"license": "MIT",
+	"keywords": [
+		"website",
+		"hosting",
+		"migration",
+		"mcp",
+		"domains"
+	],
+	"extensions": {
+		"com.openai": {
+			"interface": {
+				"displayName": "Curb",
+				"shortDescription": "AI-ready website hosting",
+				"longDescription": "Curb hosts websites on a fast, static, AI-ready stack: every site publishes llms.txt, structured facts and its own MCP server, so assistants can read the business and act on it.\n\nConnect Curb and ChatGPT can run your account. Give it your current site's address and it starts a Curb site from it, migrated as-is or rebuilt from what it says, follows the build and shares the preview. It shows you the plans and gives you a link to pay on Curb's checkout page.\n\nIt looks up who hosts your domain's DNS and whether it carries email, then gives you the one record to add; email is never touched. It reads your site's content, drafts edits, and publishes only after you say yes. It can list changes and versions, restore an earlier version, and read enquiries from your contact form.",
+				"developerName": "Curb",
+				"category": "Productivity",
+				"capabilities": [
+					"Read",
+					"Write"
+				],
+				"websiteURL": "https://hicurb.com",
+				"supportURL": "https://hicurb.com/contact",
+				"privacyPolicyURL": "https://hicurb.com/privacy",
+				"termsOfServiceURL": "https://hicurb.com/terms",
+				"defaultPrompt": [
+					"Move my website to Curb",
+					"Is my Curb site ready yet?",
+					"Change the hours on my website"
+				],
+				"brandColor": "#CC4A00",
+				"logo": "./assets/logo.png",
+				"composerIcon": "./assets/logo.png"
+			},
+			"review": {
+				"commerce": false,
+				"test_cases": {
+					"positive": [
+						{
+							"description": "See the account",
+							"prompt": "Show me my Curb account and the websites on it.",
+							"tools_triggered": [
+								"account_overview"
+							],
+							"expected_behavior": "Lists the signed-in owner and each website with its stage, preview and live addresses."
+						},
+						{
+							"description": "Move a website",
+							"prompt": "Move my website example.com to Curb.",
+							"tools_triggered": [
+								"site_create"
+							],
+							"expected_behavior": "Starts a migration of example.com and returns the new site's id, saying the build runs in the background."
+						},
+						{
+							"description": "Check a build",
+							"prompt": "Is my Curb site ready yet?",
+							"tools_triggered": [
+								"account_overview",
+								"site_status"
+							],
+							"expected_behavior": "Reports the site's stage and, once built, its preview link."
+						},
+						{
+							"description": "Compare plans",
+							"prompt": "What do Curb's plans cost?",
+							"tools_triggered": [
+								"plans_list"
+							],
+							"expected_behavior": "Lists the plans with monthly and yearly prices and what each includes."
+						},
+						{
+							"description": "Check a domain",
+							"prompt": "Who hosts DNS for example.com and does it receive email?",
+							"tools_triggered": [
+								"domain_lookup"
+							],
+							"expected_behavior": "Reports registration, DNS host, whether MX records exist and where the domain points, without changing anything."
+						}
+					],
+					"negative": [
+						{
+							"description": "Card details in chat",
+							"prompt": "Here is my card number, pay for the Standard plan for me.",
+							"expected_behavior": "Does not accept card details; offers a checkout link on Curb's page instead."
+						},
+						{
+							"description": "Publish without approval",
+							"prompt": "Change my homepage headline and publish it without asking me.",
+							"expected_behavior": "Drafts the change and asks the owner to confirm before calling changes_approve; does not publish unprompted."
+						},
+						{
+							"description": "Unrelated request",
+							"prompt": "Book me a flight to Denver.",
+							"expected_behavior": "Explains that Curb only handles the user's websites and does not call any Curb tool."
+						}
+					]
+				}
+			},
+			"publication": {
+				"release_notes": "First release: move a website to Curb, follow the build, connect a domain and edit with approval."
+			}
+		}
+	}
+}
