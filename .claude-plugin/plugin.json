@@ -15,5 +15,10 @@
 		"domains"
 	],
 	"license": "MIT",
-	"repository": "https://github.com/Adamparishspok/curb-plugin"
+	"repository": "https://github.com/Adamparishspok/curb-plugin",
+	"icon": ".claude-plugin/icon.png",
+	"documentationUrl": "https://hicurb.com/agents",
+	"supportUrl": "https://hicurb.com/contact",
+	"privacyPolicyUrl": "https://hicurb.com/privacy",
+	"termsOfServiceUrl": "https://hicurb.com/terms"
 }
