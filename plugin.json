@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"description": "Move your website to Curb's fast, AI-ready hosting and run it from ChatGPT.",
 	"author": {
-		"name": "Curb",
+		"name": "Adam Parish",
 		"url": "https://hicurb.com"
 	},
 	"homepage": "https://hicurb.com/agents",
@@ -22,8 +22,8 @@
 			"interface": {
 				"displayName": "Curb",
 				"shortDescription": "AI-ready website hosting",
-				"longDescription": "Curb hosts websites on a fast, static, AI-ready stack: every site publishes llms.txt, structured facts and its own MCP server, so assistants can read the business and act on it.\n\nConnect Curb and ChatGPT can run your account. Give it your current site's address and it starts a Curb site from it, migrated as-is or rebuilt from what it says, follows the build and shares the preview. It shows you the plans and gives you a link to pay on Curb's checkout page.\n\nIt looks up who hosts your domain's DNS and whether it carries email, then gives you the one record to add; email is never touched. It reads your site's content, drafts edits, and publishes only after you say yes. It can list changes and versions, restore an earlier version, and read enquiries from your contact form.",
-				"developerName": "Curb",
+				"longDescription": "Curb hosts websites on a fast, static, AI-ready stack: every site publishes llms.txt, structured facts and its own MCP server, so assistants can read the business and act on it.\n\nConnect Curb and ChatGPT can run your account. Give it your current site's address and it starts a Curb site from it, migrated as-is or rebuilt from what it says, follows the build and shares the preview. It shows you the plans and gives you a link to pay on Curb's checkout page.\n\nIt looks up who hosts your domain's DNS and whether it carries email, then gives you the one record to add; email is never touched. It reads your site's content, drafts edits, and publishes only after you say yes. It can list changes and versions, restore an earlier version, read enquiries from your contact form, and invite you to your site's code on GitHub.",
+				"developerName": "Adam Parish",
 				"category": "Productivity",
 				"capabilities": [
 					"Read",
