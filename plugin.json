@@ -4,11 +4,11 @@
 	"version": "1.0.0",
 	"description": "Move your website to Curb's fast, AI-ready hosting and run it from ChatGPT.",
 	"author": {
-		"name": "Adam Parish",
+		"name": "Curb",
 		"url": "https://hicurb.com"
 	},
 	"homepage": "https://hicurb.com/agents",
-	"repository": "https://github.com/Adamparishspok/curb-plugin",
+	"repository": "https://github.com/hicurb/curb-plugin",
 	"license": "MIT",
 	"keywords": [
 		"website",

@@ -14,7 +14,7 @@ Nothing is published until you say yes.
 ## Install
 
 ```text
-/plugin marketplace add Adamparishspok/curb-plugin
+/plugin marketplace add hicurb/curb-plugin
 /plugin install curb@curb
 /mcp
 ```
